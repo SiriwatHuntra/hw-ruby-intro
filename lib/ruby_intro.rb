@@ -12,7 +12,7 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-    
+
     if arr.length == 0
         return false
     elsif arr.length == 1
@@ -35,7 +35,15 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+    s = s.downcase
+    consonant_array = "b c d f g h j k l m n p q r s t v x y z".split
+    puts consonant_array
+
+    if (consonant_array.include? s[0,1])
+        print("consonant \n")
+    else
+        print("it not consonant \n")
+    end
 end
 
 def binary_multiple_of_4? s
