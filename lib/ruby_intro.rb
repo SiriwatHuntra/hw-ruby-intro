@@ -40,9 +40,16 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+    if s.is_a? String
+        if s.delete('01') == ''
+          puts 0 == (s.to_i(2))%4
+        else
+          return false
+        end
+      else
+        return false
+      end
 end
-
 # Part 3
 
 class BookInStock
