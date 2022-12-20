@@ -7,3 +7,5 @@ gem 'cucumber', '2.0.0'
 
 gem 'byebug'
 
+
+gem "ruby-lsp", "~> 0.0.4", :group => :development
