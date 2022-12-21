@@ -44,8 +44,8 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-    return false if binary_string.empty? || !binary_string.match(/^[01]+$/)
-    number = binary_string.to_i(2)
+    return false if s.empty? || !s.match(/^[01]+$/)
+    number = s.to_i(2)
     return number % 4 == 0
 end
 
