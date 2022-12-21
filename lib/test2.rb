@@ -1,7 +1,7 @@
 def binary_multiple_of_4? s
   if s.is_a? String
     if s.delete('01') == ''
-      puts 0 == (s.to_i(2))%4
+      return 0 == (s.to_i(2))%4
     else
       return false
     end

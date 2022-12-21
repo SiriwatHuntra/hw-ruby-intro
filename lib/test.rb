@@ -1,8 +1,7 @@
 def vowelOrConsonant(s)
-  s = s.to_s.downcase
-  return s[0,1].match?(/\A-?\d+\Z/)
+  puts s.delete('01') == ''
 end
 
-vowelOrConsonant('c')
+vowelOrConsonant('c10100')
 vowelOrConsonant('E')
-vowelOrConsonant(555)
+vowelOrConsonant('101010000')
