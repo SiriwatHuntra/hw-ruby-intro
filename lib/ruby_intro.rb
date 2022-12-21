@@ -7,22 +7,14 @@ def sum arr
 end
 
 def max_2_sum arr
-    a = arr.max(2){ |a, b| a<=>b }
-    a = a.sum
+    a = (arr.max(2){ |a, b| a<=>b }).sum
 end
 
 def sum_to_n? arr, n
-
-    if arr.length == 0
-        return false
-    elsif arr.length == 1
-        return false
-    end
+    return false if arr.length == 0 || arr.length == 1
     arr.each_with_index do |x, index|
         arr.drop(index).each_with_index do |y, index2|
-            if (x + y) == n and index != index2 + index
-                return true
-            end
+            return true if (x + y) == n and index != index2 + index
         end
     end
     return false
@@ -56,8 +48,6 @@ class BookInStock
     attr_writer :isbn
     attr_writer :price
     def initialize (isbn, price)
-        # raise ArgumentError if isbn = "" || isbn.kind_of?(String)
-        # raise ArgumentError if price <= 0
         raise ArgumentError if price <= 0
         raise ArgumentError if isbn.length <= 0
         @isbn = isbn
